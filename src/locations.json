@@ -1,0 +1,302 @@
+[
+    {
+        "team": "Boston Red Sox",
+        "park": "Fenway Park",
+        "league": "AL",
+        "division": "AL East",
+        "address": "4 Yawkey Way",
+        "city": "Boston, MA",
+        "site": "https://www.mlb.com/redsox",
+        "position": {"lat": 42.3467, "lng": -71.0972}
+    },
+    {
+        "team": "New York Yankees",
+        "park": "Yankee Stadium",
+        "league": "AL",
+        "division": "AL East",
+        "address": "1 E 161st St",
+        "city": "Bronx, NY",
+        "site": "https://www.mlb.com/yankees",
+        "position": {"lat": 40.8296, "lng": -73.9262}
+    },
+    {
+        "team": "Baltimore Orioles",
+        "park": "Camden Yards",
+        "league": "AL",
+        "division": "AL East",
+        "address": "333 W Camden St",
+        "city": "Baltimore, MD",
+        "site": "https://www.mlb.com/orioles",
+        "position": {"lat": 39.2839, "lng": -76.6216}
+    },
+    {
+        "team": "Tampa Bay Rays",
+        "park": "Tropicana Field",
+        "league": "AL",
+        "division": "AL East",
+        "address": "1 Tropicana Dr",
+        "city": "St. Petersburg, FL",
+        "site": "https://www.mlb.com/rays",
+        "position": {"lat": 27.7682, "lng": -82.6534}
+    },
+    {
+        "team": "Toronto Blue Jays",
+        "park": "Rogers Centre",
+        "league": "AL",
+        "division": "AL East",
+        "address": "1 Blue Jays Way",
+        "city": "Toronto, ON",
+        "site": "https://www.mlb.com/bluejays",
+        "position": {"lat": 43.6414, "lng": -79.3894}
+    },
+    {
+        "team": "Cleveland Indians",
+        "park": "Progressive Field",
+        "league": "AL",
+        "division": "AL Central",
+        "address": "2401 Ontario St",
+        "city": "Cleveland, OH",
+        "site": "https://www.mlb.com/indians",
+        "position": {"lat": 41.4962, "lng": -81.6852}
+    },
+    {
+        "team": "Chicago White Sox",
+        "park": "Guaranteed Rate Field",
+        "league": "AL",
+        "division": "AL Central",
+        "address": "333 W 35th St",
+        "city": "Chicago, IL",
+        "site": "https://www.mlb.com/whitesox",
+        "position": {"lat": 41.8299, "lng": -87.6338}
+    },
+    {
+        "team": "Minnesota Twins",
+        "park": "Target Field",
+        "league": "AL",
+        "division": "AL Central",
+        "address": "1 Twins Way",
+        "city": "Minneapolis, MN",
+        "site": "https://www.mlb.com/twins",
+        "position": {"lat": 44.9818, "lng": -93.2775}
+    },
+    {
+        "team": "Kansas City Royals",
+        "park": "Kauffman Stadium",
+        "league": "AL",
+        "division": "AL Central",
+        "address": "1 Royals Way",
+        "city": "Kansas City, MO",
+        "site": "https://www.mlb.com/royals",
+        "position": {"lat": 39.0517, "lng": -94.4803}
+    },
+    {
+        "team": "Detroit Tigers",
+        "park": "Comerica Park",
+        "league": "AL",
+        "division": "AL Central",
+        "address": "2100 Woodward Ave",
+        "city": "Detroit, MI",
+        "site": "https://www.mlb.com/tigers",
+        "position": {"lat": 42.3390, "lng": -83.0485}
+    },
+    {
+        "team": "Los Angeles Angels",
+        "park": "Angel Stadium",
+        "league": "AL",
+        "division": "AL West",
+        "address": "2000 E Gene Autry Way",
+        "city": "Anaheim, CA",
+        "site": "https://www.mlb.com/angels",
+        "position": {"lat": 33.8003, "lng": -117.8827}
+    },
+    {
+        "team": "Houston Astros",
+        "park": "Minute Maid Park",
+        "league": "AL",
+        "division": "AL West",
+        "address": "501 Crawford St",
+        "city": "Houston, TX",
+        "site": "https://www.mlb.com/astros",
+        "position": {"lat": 29.7573, "lng": -95.3555}
+    },
+    {
+        "team": "Oakland Athletics",
+        "park": "Oakland Alameda Coliseum",
+        "league": "AL",
+        "division": "AL West",
+        "address": "7000 Coliseum Way",
+        "city": "Oakland, CA",
+        "site": "https://www.mlb.com/athletics",
+        "position": {"lat": 37.7516, "lng": -122.2005}
+    },
+    {
+        "team": "Seattle Mariners",
+        "park": "Safeco Field",
+        "league": "AL",
+        "division": "AL West",
+        "address": "1250 1st Ave S",
+        "city": "Seattle, WA",
+        "site": "https://www.mlb.com/mariners",
+        "position": {"lat": 47.5914, "lng": -122.3325}
+    },
+    {
+        "team": "Texas Rangers",
+        "park": "Globe Life Park",
+        "league": "AL",
+        "division": "AL West",
+        "address": "1000 Ballpark Way",
+        "city": "Arlington, TX",
+        "site": "https://www.mlb.com/rangers",
+        "position": {"lat": 32.7512, "lng": -97.0832}
+    },
+    {
+        "team": "New York Mets",
+        "park": "Citi Field",
+        "league": "NL",
+        "division": "NL East",
+        "address": "123-01 Roosevelt Ave",
+        "city": "Queens, NY",
+        "site": "https://www.mlb.com/mets",
+        "position": {"lat": 40.7571, "lng": -70.8458}
+    },
+    {
+        "team": "Atlanta Braves",
+        "park": "SunTrust Park",
+        "league": "NL",
+        "division": "NL East",
+        "address": "755 Battery Ave SE",
+        "city": "Atlanta, GA",
+        "site": "https://www.mlb.com/braves",
+        "position": {"lat": 33.8908, "lng": -84.4678}
+    },
+    {
+        "team": "Washington Nationals",
+        "park": "Nationals Park",
+        "league": "NL",
+        "division": "NL East",
+        "address": "1500 S Capitol St SE",
+        "city": "Washington, DC",
+        "site": "https://www.mlb.com/nationals",
+        "position": {"lat": 38.8730, "lng": -77.0074}
+    },
+    {
+        "team": "Philadelphia Phillies",
+        "park": "Citizens Bank Park",
+        "league": "NL",
+        "division": "NL East",
+        "address": "1 Citizens Bank Park Way",
+        "city": "Philadelphia, PA",
+        "site": "https://www.mlb.com/phillies",
+        "position": {"lat": 39.9061, "lng": -75.1665}
+    },
+    {
+        "team": "Miami Marlins",
+        "park": "Marlins Park",
+        "league": "NL",
+        "division": "NL East",
+        "address": "501 Marlins Way",
+        "city": "Miami, FL",
+        "site": "https://www.mlb.com/marlins",
+        "position": {"lat": 25.7781, "lng": -80.2197}
+    },
+    {
+        "team": "Milwaukee Brewers",
+        "park": "Miller Park",
+        "league": "NL",
+        "division": "NL Central",
+        "address": "1 Brewers Way",
+        "city": "Milwaukee, WI",
+        "site": "https://www.mlb.com/brewers",
+        "position": {"lat": 43.0280, "lng": -87.9712}
+    },
+    {
+        "team": "Chicago Cubs",
+        "park": "Wrigley Field",
+        "league": "NL",
+        "division": "NL Central",
+        "address": "1060 W Addison St",
+        "city": "Chicago, IL",
+        "site": "https://www.mlb.com/cubs",
+        "position": {"lat": 41.9484, "lng": -87.6553}
+    },
+    {
+        "team": "St. Louis Cardinals",
+        "park": "Busch Stadium",
+        "league": "NL",
+        "division": "NL Central",
+        "address": "700 Clark Ave",
+        "city": "St. Louis, MO",
+        "site": "https://www.mlb.com/cardinals",
+        "position": {"lat": 38.6226, "lng": -90.1928}
+    },
+    {
+        "team": "Pittsburgh Pirates",
+        "park": "PNC Park",
+        "league": "NL",
+        "division": "NL Central",
+        "address": "115 Federal St",
+        "city": "Pittsburgh, PA",
+        "site": "https://www.mlb.com/pirates",
+        "position": {"lat": 40.4469, "lng": -80.0057}
+    },
+    {
+        "team": "Cincinnati Reds",
+        "park": "Great American Ball Park",
+        "league": "NL",
+        "division": "NL Central",
+        "address": "100 Joe Nuxhall Way",
+        "city": "Cincinnati, OH",
+        "site": "https://www.mlb.com/reds",
+        "position": {"lat": 39.0979, "lng": -84.5082}
+    },
+    {
+        "team": "Arizona Diamondbacks",
+        "park": "Chase Field",
+        "league": "NL",
+        "division": "NL West",
+        "address": "401 E Jefferson St",
+        "city": "Phoenix, AZ",
+        "site": "https://www.mlb.com/dbacks",
+        "position": {"lat": 33.4455, "lng": -112.0662}
+    },
+    {
+        "team": "Los Angeles Dodgers",
+        "park": "Dodger Stadium",
+        "league": "NL",
+        "division": "NL West",
+        "address": "1000 Vin Scully Ave",
+        "city": "Los Angeles, CA",
+        "site": "https://www.mlb.com/dodgers",
+        "position": {"lat": 34.0739, "lng": -118.2400}
+    },
+    {
+        "team": "Colorado Rockies",
+        "park": "Coors Field",
+        "league": "NL",
+        "division": "NL West",
+        "address": "2001 Blake St",
+        "city": "Denver, CO",
+        "site": "https://www.mlb.com/rockies",
+        "position": {"lat": 39.7559, "lng": -104.9942}
+    },
+    {
+        "team": "San Diego Padres",
+        "park": "Petco Park",
+        "league": "NL",
+        "division": "NL West",
+        "address": "100 Park Blvd",
+        "city": "San Diego, CA",
+        "site": "https://www.mlb.com/padres",
+        "position": {"lat": 32.7076, "lng": -117.1570}
+    },
+    {
+        "team": "San Francisco Giants",
+        "park": "AT&T Park",
+        "league": "NL",
+        "division": "NL West",
+        "address": "24 Willie Mays Plaza",
+        "city": "San Francisco, CA",
+        "site": "https://www.mlb.com/giants",
+        "position": {"lat": 37.7786, "lng": -122.3893}
+    }
+]

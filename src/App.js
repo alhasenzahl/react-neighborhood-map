@@ -1,28 +1,74 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import locations from './locations.json';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+const MAP_KEY = 'AIzaSyA0DHwVdcQEAjyzGquFF-1ROaaClowVr0c';
+
+const mapStyles = {
+    height: '100%',
+    width: '100%'
+};
+
+const mapCenter = {
+    lat: 40.806862,
+    lng: -96.681679
 }
 
-export default App;
+const mapZoom = 5;
+
+class App extends Component {
+    state = {
+        showingInfoWindow: false,
+        activeMarker: {},
+        selectedPlace: {},
+        allLocations: locations
+    }
+    onMarkerClick = (props, marker, e) => {
+        this.setState({
+            selectedPlace: props,
+            activeMarker: marker,
+            showingInfoWindow: true
+        });
+    }
+    onClose = (props) => {
+        if (this.state.showingInfoWindow) {
+            this.setState({
+                showingInfoWindow: false,
+                activeMarker: null
+            });
+        }
+    } 
+    render() {
+        return (
+            <div className="App">
+                <div className="header-div">
+                    <h1 className="page-name">MLB Ballparks</h1>
+                </div>
+                <Map   
+                    google = { this.props.google }
+                    zoom = { mapZoom }
+                    style = { mapStyles }
+                    initialCenter = { mapCenter }
+                    locations = { this.state.allLocations }
+                >
+                    <Marker
+                        onClick = { this.onMarkerClick }
+                        name = { this.state.allLocations[0].team }
+                    />
+                    <InfoWindow
+                        marker = { this.state.activeMarker }
+                        visible = { this.state.showingInfoWindow }
+                        onClose = { this.onClose }
+                    >
+                        <div>
+                            <h4>{ this.state.selectedPlace.name }</h4>
+                        </div>
+                    </InfoWindow>
+                </Map>
+            </div>
+        );
+    }
+}
+
+export default GoogleApiWrapper({apiKey: MAP_KEY})(App)
