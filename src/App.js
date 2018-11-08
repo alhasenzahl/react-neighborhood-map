@@ -22,7 +22,8 @@ class App extends Component {
         showingInfoWindow: false,
         activeMarker: {},
         selectedPlace: {},
-        allLocations: locations
+        allLocations: locations,
+        query: ''
     }
     onMarkerClick = (props, marker, e) => {
         this.setState({
@@ -44,6 +45,30 @@ class App extends Component {
             <div className="App">
                 <div className="header-div">
                     <h1 className="page-name">MLB Ballparks</h1>
+                    <nav className="hamburger">
+                        <i className="fas fa-bars"></i>
+                    </nav>
+                </div>
+                <div className="dropDown-menu">
+                    <input 
+                        className="search-field"
+                        type="text" 
+                        placeholder="Search by ballpark or team"
+                        // value={ this.state.query } 
+                        // onChange={(event) => this.updateQuery(event.target.value)} 
+                    />
+                    <div className="button-container">
+                        {locations.map((location) => {
+                            return (
+                                <button 
+                                    className="menu-button"
+                                    key={ location.team }
+                                >
+                                    { location.park }
+                                </button>
+                            )
+                        })}
+                    </div>
                 </div>
                 <Map   
                     google = { this.props.google }
@@ -58,6 +83,9 @@ class App extends Component {
                                 key = { location.team }
                                 onClick = { this.onMarkerClick }
                                 name = { location.team }
+                                home = { location.park }
+                                address = { location.address }
+                                city = { location.city }
                                 position = { location.position }
                             />
                         )
@@ -69,6 +97,9 @@ class App extends Component {
                     >
                         <div>
                             <h4>{ this.state.selectedPlace.name }</h4>
+                            <h4>{ this.state.selectedPlace.home }</h4>
+                            <h4>{ this.state.selectedPlace.address }</h4>
+                            <h4>{ this.state.selectedPlace.city }</h4>
                         </div>
                     </InfoWindow>
                 </Map>
@@ -78,3 +109,13 @@ class App extends Component {
 }
 
 export default GoogleApiWrapper({apiKey: MAP_KEY})(App)
+
+/**
+ * 
+ * TODO: 
+ * 
+ * Need to add the regexp npm package so that we can try and filter the locations based on the queries in the input field.  
+ * Add a function to handle what happens when a button is clicked on.
+ * Add functionality for clicking on the hamburger menu to open and close the menu.
+ * 
+ */
