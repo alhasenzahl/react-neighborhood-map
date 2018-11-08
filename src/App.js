@@ -11,8 +11,8 @@ const mapStyles = {
 };
 
 const mapCenter = {
-    lat: 40.806862,
-    lng: -96.681679
+    lat: 37.697948,
+    lng: -97.314835
 }
 
 const mapZoom = 5;
@@ -52,10 +52,16 @@ class App extends Component {
                     initialCenter = { mapCenter }
                     locations = { this.state.allLocations }
                 >
-                    <Marker
-                        onClick = { this.onMarkerClick }
-                        name = { this.state.allLocations[0].team }
-                    />
+                    {locations.map((location) => {
+                        return (
+                            <Marker
+                                key = { location.team }
+                                onClick = { this.onMarkerClick }
+                                name = { location.team }
+                                position = { location.position }
+                            />
+                        )
+                    })}
                     <InfoWindow
                         marker = { this.state.activeMarker }
                         visible = { this.state.showingInfoWindow }
