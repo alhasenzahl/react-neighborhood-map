@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import locations from './locations.json';
+import Dropdown from './Dropdown';
 
 const MAP_KEY = 'AIzaSyA0DHwVdcQEAjyzGquFF-1ROaaClowVr0c';
 
 const mapStyles = {
     height: '100%',
-    width: '100%'
+    width: '100%',
 };
 
 const mapCenter = {
@@ -23,7 +24,8 @@ class App extends Component {
         activeMarker: {},
         selectedPlace: {},
         allLocations: locations,
-        query: ''
+        query: '',
+        open: false
     }
     onMarkerClick = (props, marker, e) => {
         this.setState({
@@ -40,37 +42,37 @@ class App extends Component {
             });
         }
     } 
+    toggleHamburger = () => {
+        this.setState({
+            open: !this.state.open
+        });
+        const dropdown = document.querySelector('.dropDown-menu');
+
+        if (this.state.open === false) {
+            dropdown.style.display = 'none';
+        } else {
+            dropdown.style.display = 'block';
+        }
+    }
     render() {
         return (
             <div className="App">
                 <div className="header-div">
                     <h1 className="page-name">MLB Ballparks</h1>
-                    <nav className="hamburger">
-                        <i className="fas fa-bars"></i>
-                    </nav>
+                    <button 
+                        className="hamburger"
+                        onClick = { this.toggleHamburger }
+                    >
+                            <i className="fas fa-bars"></i>
+                    </button>
                 </div>
-                <div className="dropDown-menu">
-                    <input 
-                        className="search-field"
-                        type="text" 
-                        placeholder="Search by ballpark or team"
-                        // value={ this.state.query } 
-                        // onChange={(event) => this.updateQuery(event.target.value)} 
-                    />
-                    <div className="button-container">
-                        {locations.map((location) => {
-                            return (
-                                <button 
-                                    className="menu-button"
-                                    key={ location.team }
-                                >
-                                    { location.park }
-                                </button>
-                            )
-                        })}
-                    </div>
-                </div>
-                <Map   
+                <Dropdown 
+                    locations = { this.state.allLocations }
+                    open = { this.state.open }
+                    toggleMenu = { this.toggleHamburger }
+                />
+                <Map 
+                    className="map"  
                     google = { this.props.google }
                     zoom = { mapZoom }
                     style = { mapStyles }
