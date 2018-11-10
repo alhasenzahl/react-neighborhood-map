@@ -12,10 +12,19 @@ class Dropdown extends Component {
                 <input 
                     className="search-field"
                     type="text" 
-                    placeholder="Search by ballpark or team"
+                    placeholder="Search by ballpark"
                     // value={ this.state.query } 
                     // onChange={(event) => this.updateQuery(event.target.value)} 
                 />
+                <div className="location-list">
+                    {this.props.locations.map((location) => {
+                        return (
+                            <button
+                                key= { location.team }
+                            >{ location.park } - { location.team }</button>
+                        )
+                    })}
+                </div>
             </div>
         )
     }
