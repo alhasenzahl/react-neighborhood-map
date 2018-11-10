@@ -24,8 +24,7 @@ class App extends Component {
         activeMarker: {},
         selectedPlace: {},
         allLocations: locations,
-        query: '',
-        open: false
+        open: true,
     }
     onMarkerClick = (props, marker, e) => {
         this.setState({
@@ -48,10 +47,10 @@ class App extends Component {
         });
         const dropdown = document.querySelector('.dropDown-menu');
 
-        if (this.state.open === false) {
-            dropdown.style.display = 'none';
-        } else {
+        if (this.state.open === true) {
             dropdown.style.display = 'block';
+        } else {
+            dropdown.style.display = 'none';
         }
     }
     render() {
@@ -63,7 +62,7 @@ class App extends Component {
                         className="hamburger"
                         onClick = { this.toggleHamburger }
                     >
-                            <i className="fas fa-bars"></i>
+                        <i className="fas fa-bars"></i>
                     </button>
                 </div>
                 <Dropdown 
@@ -111,13 +110,3 @@ class App extends Component {
 }
 
 export default GoogleApiWrapper({apiKey: MAP_KEY})(App)
-
-/**
- * 
- * TODO: 
- * 
- * Need to add the regexp npm package so that we can try and filter the locations based on the queries in the input field.  
- * Add a function to handle what happens when a button is clicked on.
- * Add functionality for clicking on the hamburger menu to open and close the menu.
- * 
- */

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 
 class Dropdown extends Component {
+    state = {
+        query: '',
+        searchedParks: [],
+    }
     render() {
         return (
             <div className="dropDown-menu">
@@ -12,17 +16,6 @@ class Dropdown extends Component {
                     // value={ this.state.query } 
                     // onChange={(event) => this.updateQuery(event.target.value)} 
                 />
-                <div className="search-list-container">
-
-                </div>
-                <div className="button-container">
-                    <button className="button left">AL East</button>
-                    <button className="button">AL Central</button>
-                    <button className="button left">AL West</button>
-                    <button className="button">NL East</button>
-                    <button className="button left">NL Central</button>
-                    <button className="button">NL West</button>
-                </div>
             </div>
         )
     }
