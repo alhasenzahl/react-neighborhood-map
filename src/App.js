@@ -77,6 +77,8 @@ class App extends Component {
                     query = { this.state.query }
                 />
                 <Map 
+                    role="application"
+                    aria-label="map"    
                     className="map"  
                     google = { this.props.google }
                     zoom = { mapZoom }
