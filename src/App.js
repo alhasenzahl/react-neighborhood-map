@@ -84,7 +84,7 @@ class App extends Component {
                     initialCenter = { mapCenter }
                     locations = { this.state.allLocations }
                 >
-                    {locations.map((location) => {
+                    {locations.filter(location => location.park.toLowerCase().includes(this.state.query.toLowerCase())).map(location => {
                         return (
                             <Marker
                                 key = { location.team }
