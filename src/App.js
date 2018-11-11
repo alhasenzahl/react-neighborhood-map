@@ -24,7 +24,8 @@ class App extends Component {
         activeMarker: {},
         selectedPlace: {},
         allLocations: locations,
-        open: true
+        open: true,
+        query: ''
     }
     onMarkerClick = (props, marker, e) => {
         this.setState({
@@ -41,6 +42,9 @@ class App extends Component {
             });
         }
     } 
+    updateQuery = (query) => {
+        this.setState({ query })
+    }
     toggleHamburger = () => {
         this.setState({
             open: !this.state.open
@@ -69,6 +73,8 @@ class App extends Component {
                     locations = { this.state.allLocations }
                     open = { this.state.open }
                     toggleMenu = { this.toggleHamburger }
+                    updateQuery = { this.updateQuery }
+                    query = { this.state.query }
                 />
                 <Map 
                     className="map"  
