@@ -3,8 +3,10 @@ import './App.css';
 
 class Dropdown extends Component {
     state = {
-        query: '',
-        searchedParks: [],
+        query: ''
+    }
+    updateQuery = (query) => {
+        this.setState({ query })
     }
     render() {
         return (
@@ -13,11 +15,11 @@ class Dropdown extends Component {
                     className="search-field"
                     type="text" 
                     placeholder="Search by ballpark"
-                    // value={ this.state.query } 
-                    // onChange={(event) => this.updateQuery(event.target.value)} 
+                    value={ this.state.query } 
+                    onChange={(event) => this.updateQuery(event.target.value)} 
                 />
                 <div className="location-list">
-                    {this.props.locations.map((location) => {
+                    {this.props.locations.filter(location => location.park.toLowerCase().includes(this.state.query.toLowerCase())).map(location => {
                         return (
                             <button
                                 key= { location.team }

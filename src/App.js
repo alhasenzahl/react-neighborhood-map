@@ -24,7 +24,7 @@ class App extends Component {
         activeMarker: {},
         selectedPlace: {},
         allLocations: locations,
-        open: true,
+        open: true
     }
     onMarkerClick = (props, marker, e) => {
         this.setState({
