@@ -5,6 +5,12 @@ import locations from './locations.json';
 import Dropdown from './Dropdown';
 
 const MAP_KEY = 'AIzaSyA0DHwVdcQEAjyzGquFF-1ROaaClowVr0c';
+// Client ID
+// 0VOGQQUUEXRKWJIGCO4P1DX505ODTXGWKYOBMSEHBIUSVFX4
+// Client Secret
+// 2TWU5HJ2RKL3DF5J4URVRRZVYYB5K3WRFGBZHYXXYKYZWZPH
+// v="20180323" 
+
 
 const mapStyles = {
     height: '100%',
@@ -19,6 +25,7 @@ const mapCenter = {
 const mapZoom = 5;
 
 class App extends Component {
+    realMarkers = [];
     state = {
         showingInfoWindow: false,
         activeMarker: {},
@@ -57,7 +64,12 @@ class App extends Component {
             dropdown.style.display = 'none';
         }
     }
+    addMarkerRef = (obj) => {
+        this.realMarkers.push(obj);
+        console.log("real markers: ", this.realMarkers);
+    }
     render() {
+        this.realMarkers = [];
         return (
             <div className="App">
                 <div className="header-div">
@@ -89,6 +101,7 @@ class App extends Component {
                     {locations.filter(location => location.park.toLowerCase().includes(this.state.query.toLowerCase())).map(location => {
                         return (
                             <Marker
+                                ref = { this.addMarkerRef }
                                 key = { location.team }
                                 onClick = { this.onMarkerClick }
                                 name = { location.team }
